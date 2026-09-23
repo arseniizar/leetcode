@@ -1,7 +1,6 @@
 """
 LeetCode 242: Valid Anagram (Easy)
-Патерн: Hash Map / Frequency Counter
-Час: O(n), Пам'ять: O(1) (бо літер в алфавіті максимум 26)
+Time: O(n), Space: O(1)
 """
 from collections import Counter
 

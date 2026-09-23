@@ -1,8 +1,6 @@
 """
 LeetCode 703: Kth Largest Element in a Stream (Easy)
-Pattern: Min-Heap of Size K
-Time: O(n log k), Space: O(k)
-Idea: Maintain a heap of exactly k largest elements. The smallest of them (at the root) is the kth largest!
+Time: O(log k) per add, Space: O(k)
 """
 import heapq
 
@@ -12,7 +10,6 @@ class KthLargest:
         self.min_heap = nums
         heapq.heapify(self.min_heap)
 
-        # Evict smaller elements until the heap size is exactly k
         while len(self.min_heap) > self.k:
             heapq.heappop(self.min_heap)
 

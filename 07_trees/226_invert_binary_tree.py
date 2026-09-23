@@ -1,6 +1,5 @@
 """
 LeetCode 226: Invert Binary Tree (Easy)
-Pattern: Tree / DFS (Recursive Tree Inversion)
 Time: O(n), Space: O(h)
 """
 
@@ -16,7 +15,6 @@ class Solution:
         if not root:
             return None
 
-        # Swap left and right child subtrees
         root.left, root.right = root.right, root.left
 
         self.invertTree(root.left)

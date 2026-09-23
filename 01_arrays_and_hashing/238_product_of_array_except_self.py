@@ -1,10 +1,6 @@
 """
 LeetCode 238: Product of Array Except Self (Medium)
-Патерн: Prefix & Postfix Products (без ділення!)
-Час: O(n), Пам'ять: O(1) (вихідний масив не рахується за додаткову пам'ять)
-Ідея:
-  1. Прохід зліва направо: результат[i] = добуток усіх чисел лівіше від i.
-  2. Прохід справа наліво: домножуємо на добуток усіх чисел правіше від i.
+Time: O(n), Space: O(1)
 """
 
 class Solution:
@@ -12,13 +8,13 @@ class Solution:
         n = len(nums)
         res = [1] * n
 
-        # Префіксний добуток (зліва)
+        # Prefix products
         prefix = 1
         for i in range(n):
             res[i] = prefix
             prefix *= nums[i]
 
-        # Постфіксний добуток (справа)
+        # Postfix products
         postfix = 1
         for i in range(n - 1, -1, -1):
             res[i] *= postfix

@@ -1,12 +1,10 @@
 """
 LeetCode 217: Contains Duplicate (Easy)
-Патерн: Hash Set
-Час: O(n), Пам'ять: O(n)
+Time: O(n), Space: O(n)
 """
 
 class Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
-        # Порівнюємо довжину списку та множини унікальних елементів
         return len(nums) != len(set(nums))
 
 

@@ -1,7 +1,6 @@
 """
 LeetCode 206: Reverse Linked List (Easy)
-Патерн: Linked List (Three Pointers: prev, curr, next)
-Час: O(n), Пам'ять: O(1)
+Time: O(n), Space: O(1)
 """
 
 class ListNode:

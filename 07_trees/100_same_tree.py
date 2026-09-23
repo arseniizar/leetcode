@@ -1,6 +1,5 @@
 """
 LeetCode 100: Same Tree (Easy)
-Pattern: Tree / DFS (Recursive Node Comparison)
 Time: O(n), Space: O(h)
 """
 
@@ -13,10 +12,8 @@ class TreeNode:
 
 class Solution:
     def isSameTree(self, p: TreeNode | None, q: TreeNode | None) -> bool:
-        # Both empty
         if not p and not q:
             return True
-        # One is empty, or values don't match
         if not p or not q or p.val != q.val:
             return False
 

@@ -1,14 +1,12 @@
 """
 LeetCode 347: Top K Frequent Elements (Medium)
-Патерн: Bucket Sort або Counter
-Час: O(n), Пам'ять: O(n)
+Time: O(n log k), Space: O(n)
 """
 from collections import Counter
 
 class Solution:
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         count = Counter(nums)
-        # most_common(k) повертає k найчастіших елементів у вигляді [(elem, freq), ...]
         return [item[0] for item in count.most_common(k)]
 
 

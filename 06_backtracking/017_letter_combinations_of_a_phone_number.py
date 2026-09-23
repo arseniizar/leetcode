@@ -1,6 +1,5 @@
 """
 LeetCode 17: Letter Combinations of a Phone Number (Medium)
-Pattern: Iterative Cartesian Product / Backtracking
 Time: O(4^n * n), Space: O(4^n * n)
 """
 
@@ -14,7 +13,6 @@ class Solution:
             "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"
         }
 
-        # Iterative approach (snowball expansion):
         res = [""]
         for d in digits:
             res = [prev + letter for prev in res for letter in phone[d]]

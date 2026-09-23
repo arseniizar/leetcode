@@ -1,10 +1,6 @@
 """
 LeetCode 3: Longest Substring Without Repeating Characters (Medium)
-Pattern: Sliding Window (Dynamic Window with Hash Set)
 Time: O(n), Space: O(min(n, m))
-Idea:
-  - right pointer expands the window
-  - when a duplicate is encountered, shrink the window from the left (left += 1) until valid
 """
 
 class Solution:
@@ -14,7 +10,6 @@ class Solution:
         max_len = 0
 
         for right in range(len(s)):
-            # If current character already exists in the window -> shrink left side
             while s[right] in char_set:
                 char_set.remove(s[left])
                 left += 1

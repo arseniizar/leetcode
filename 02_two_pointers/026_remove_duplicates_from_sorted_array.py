@@ -1,8 +1,6 @@
 """
 LeetCode 26: Remove Duplicates from Sorted Array (Easy)
-Pattern: Fast and Slow Two Pointers
 Time: O(n), Space: O(1)
-Idea: In-place overwrite unique numbers at the front rather than deleting elements.
 """
 
 class Solution:
@@ -10,11 +8,8 @@ class Solution:
         if not nums:
             return 0
 
-        # k: index where the next unique number should be written
         k = 1
-
         for i in range(1, len(nums)):
-            # If current number differs from previous, it's unique!
             if nums[i] != nums[i - 1]:
                 nums[k] = nums[i]
                 k += 1

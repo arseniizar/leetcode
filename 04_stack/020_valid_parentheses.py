@@ -1,8 +1,6 @@
 """
 LeetCode 20: Valid Parentheses (Easy)
-Патерн: Stack (Стек - LIFO)
-Час: O(n), Пам'ять: O(n)
-Ідея: Відкриваючу дужку кладемо в стек. Для закриваючої — дістаємо останню зі стеку і порівнюємо.
+Time: O(n), Space: O(n)
 """
 
 class Solution:
@@ -12,7 +10,6 @@ class Solution:
 
         for char in s:
             if char in matching:
-                # Якщо стек не порожній і верхній елемент збігається
                 top = stack.pop() if stack else '#'
                 if matching[char] != top:
                     return False

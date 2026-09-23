@@ -1,8 +1,6 @@
 """
 LeetCode 49: Group Anagrams (Medium)
-Патерн: Hash Map with Sorted String or Frequency Tuple Key
-Час: O(n * k log k), Пам'ять: O(n * k)
-Ідея: Усі анаграми після сортування букв виглядають абсолютно однаково!
+Time: O(n * k log k), Space: O(n * k)
 """
 from collections import defaultdict
 
@@ -11,7 +9,6 @@ class Solution:
         groups = defaultdict(list)
 
         for s in strs:
-            # Ключем є відсортований рядок
             sorted_key = "".join(sorted(s))
             groups[sorted_key].append(s)
 

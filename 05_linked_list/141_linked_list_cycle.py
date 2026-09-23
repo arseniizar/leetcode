@@ -1,8 +1,6 @@
 """
 LeetCode 141: Linked List Cycle (Easy)
-Pattern: Fast & Slow Pointers (Floyd's Tortoise and Hare)
 Time: O(n), Space: O(1)
-Idea: Slow pointer moves 1 step, fast pointer moves 2 steps. If a cycle exists, they must meet!
 """
 
 class ListNode:

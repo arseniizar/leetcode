@@ -1,6 +1,5 @@
 """
 LeetCode 21: Merge Two Sorted Lists (Easy)
-Pattern: Linked List + Dummy Head
 Time: O(n + m), Space: O(1)
 """
 
@@ -24,7 +23,6 @@ class Solution:
                 list2 = list2.next
             curr = curr.next
 
-        # Attach remaining non-empty tail
         curr.next = list1 if list1 else list2
 
         return dummy.next

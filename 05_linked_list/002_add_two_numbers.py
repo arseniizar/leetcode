@@ -1,8 +1,6 @@
 """
 LeetCode 2: Add Two Numbers (Medium)
-Pattern: Linked List + Dummy Head + Column Addition
 Time: O(max(m, n)), Space: O(max(m, n))
-Why reverse order: Least significant digits (units) come first, allowing straightforward left-to-right addition with carry!
 """
 
 class ListNode:

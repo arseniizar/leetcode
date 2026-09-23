@@ -1,7 +1,6 @@
 """
 LeetCode 104: Maximum Depth of Binary Tree (Easy)
-Патерн: Tree / DFS (Глибина дерева)
-Час: O(n), Пам'ять: O(h)
+Time: O(n), Space: O(h)
 """
 
 class TreeNode:

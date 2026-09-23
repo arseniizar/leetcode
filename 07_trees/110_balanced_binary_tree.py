@@ -1,8 +1,6 @@
 """
 LeetCode 110: Balanced Binary Tree (Easy)
-Pattern: Tree / DFS (Height Balanced Check)
 Time: O(n), Space: O(h)
-Idea: If the absolute height difference of left and right subtrees > 1, return -1 (unbalanced).
 """
 
 class TreeNode:

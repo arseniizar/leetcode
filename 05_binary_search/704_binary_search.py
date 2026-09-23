@@ -1,7 +1,6 @@
 """
 LeetCode 704: Binary Search (Easy)
-Патерн: Binary Search (Ділення навпіл)
-Час: O(log n), Пам'ять: O(1)
+Time: O(log n), Space: O(1)
 """
 
 class Solution:

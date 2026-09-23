@@ -1,8 +1,6 @@
 """
 LeetCode 125: Valid Palindrome (Easy)
-Патерн: Two Pointers (Зустрічні вказівники)
-Час: O(n), Пам'ять: O(1)
-Ідея: Два пальці рухаються назустріч, ігноруючи небуквенні символи та регістр.
+Time: O(n), Space: O(1)
 """
 
 class Solution:
@@ -10,7 +8,6 @@ class Solution:
         left, right = 0, len(s) - 1
 
         while left < right:
-            # Пропускаємо все, що не є літерою або цифрою
             while left < right and not s[left].isalnum():
                 left += 1
             while left < right and not s[right].isalnum():

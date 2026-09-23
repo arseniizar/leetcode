@@ -1,8 +1,6 @@
 """
 LeetCode 543: Diameter of Binary Tree (Easy)
-Pattern: Tree / DFS (Diameter Calculation)
 Time: O(n), Space: O(h)
-Idea: Diameter through any node = left_height + right_height. Track the maximum across all nodes.
 """
 
 class TreeNode:
@@ -23,10 +21,7 @@ class Solution:
 
             left_h = height(node.left)
             right_h = height(node.right)
-
-            # Update the longest path passing through this node
             max_d = max(max_d, left_h + right_h)
-
             return 1 + max(left_h, right_h)
 
         height(root)

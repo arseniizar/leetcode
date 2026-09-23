@@ -1,16 +1,14 @@
 """
 LeetCode 1: Two Sum (Easy)
-Pattern: One-Pass Hash Map
 Time: O(n), Space: O(n)
 """
 
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        seen = {}  # {value: index}
+        seen = {}
 
         for i, num in enumerate(nums):
             diff = target - num
-            # Check if the complement was already seen
             if diff in seen:
                 return [seen[diff], i]
             seen[num] = i

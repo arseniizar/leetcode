@@ -1,7 +1,6 @@
 """
 LeetCode 15: 3Sum (Medium)
-Pattern: Sorting + Converging Two Pointers
-Time: O(n^2), Space: O(1) extra space (or O(n) for sorting/output)
+Time: O(n^2), Space: O(1)
 """
 
 class Solution:

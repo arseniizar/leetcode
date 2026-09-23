@@ -1,8 +1,6 @@
 """
 LeetCode 121: Best Time to Buy and Sell Stock (Easy)
-Pattern: One-Pass Running Minimum Tracking (Greedy / Sliding Window)
 Time: O(n), Space: O(1)
-Idea: Track the historical lowest price and calculate profit if sold today.
 """
 
 class Solution:
