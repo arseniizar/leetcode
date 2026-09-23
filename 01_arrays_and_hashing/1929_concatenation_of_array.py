@@ -1,16 +1,16 @@
 """
 LeetCode 1929: Concatenation of Array (Easy)
-Патерн: List Operations / Memory Allocation
-Час: O(n), Пам'ять: O(n)
+Pattern: List Operations / Memory Allocation
+Time: O(n), Space: O(n)
 """
 
 class Solution:
     def getConcatenation(self, nums: list[int]) -> list[int]:
-        # Найшвидший ідіоматичний Python:
+        # Most idiomatic and fastest in Python:
         return nums + nums
 
 
-# Альтернатива з ручним виділенням пам'яті:
+# Manual pre-allocated buffer approach:
 class SolutionManual:
     def getConcatenation(self, nums: list[int]) -> list[int]:
         n = len(nums)

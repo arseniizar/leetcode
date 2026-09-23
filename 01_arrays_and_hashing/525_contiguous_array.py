@@ -1,14 +1,14 @@
 """
 LeetCode 525: Contiguous Array (Medium)
-Патерн: Prefix Sum + Hash Map (0 -> -1)
-Час: O(n), Пам'ять: O(n)
-Ідея: Замінюємо 0 на -1. Рівна кількість 0 і 1 означає суму 0.
-      Якщо поточна сума вже зустрічалася раніше, відрізок між ними має суму 0!
+Pattern: Prefix Sum + Hash Map (0 -> -1 transformation)
+Time: O(n), Space: O(n)
+Idea: Map 0 to -1. Equal counts of 0 and 1 mean sum = 0.
+      If the current prefix sum was seen before, the subarray between the two occurrences has sum 0!
 """
 
 class Solution:
     def findMaxLength(self, nums: list[int]) -> int:
-        seen = {0: -1}  # {сума: найперший_індекс}
+        seen = {0: -1}  # {prefix_sum: earliest_index}
         current_sum = 0
         max_len = 0
 
@@ -19,7 +19,7 @@ class Solution:
             if current_sum in seen:
                 max_len = max(max_len, i - seen[current_sum])
             else:
-                # Зберігаємо ТІЛЬКИ перший індекс для максимальної довжини
+                # Store ONLY the earliest index to maximize window length
                 seen[current_sum] = i
 
         return max_len

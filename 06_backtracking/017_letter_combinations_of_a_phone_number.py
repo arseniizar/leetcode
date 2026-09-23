@@ -1,7 +1,7 @@
 """
 LeetCode 17: Letter Combinations of a Phone Number (Medium)
-Патерн: Iterative Cartesian Product / Backtracking
-Час: O(4^n * n), Пам'ять: O(4^n * n)
+Pattern: Iterative Cartesian Product / Backtracking
+Time: O(4^n * n), Space: O(4^n * n)
 """
 
 class Solution:
@@ -14,14 +14,14 @@ class Solution:
             "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"
         }
 
-        # Ітеративний спосіб (снігова куля):
+        # Iterative approach (snowball expansion):
         res = [""]
         for d in digits:
             res = [prev + letter for prev in res for letter in phone[d]]
         return res
 
 
-# Альтернатива через рекурсію (Backtracking):
+# Recursive alternative (Backtracking):
 class SolutionBacktracking:
     def letterCombinations(self, digits: str) -> list[str]:
         if not digits:
@@ -49,4 +49,4 @@ if __name__ == "__main__":
     s = Solution()
     print("Test 1 (23):", s.letterCombinations("23"))
     print("Test 2 (2):", s.letterCombinations("2"))
-    print("Test 3 (пусто):", s.letterCombinations(""))
+    print("Test 3 (empty):", s.letterCombinations(""))

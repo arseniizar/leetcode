@@ -1,7 +1,7 @@
 """
 LeetCode 21: Merge Two Sorted Lists (Easy)
-Патерн: Linked List + Dummy Head
-Час: O(n + m), Пам'ять: O(1)
+Pattern: Linked List + Dummy Head
+Time: O(n + m), Space: O(1)
 """
 
 class ListNode:
@@ -24,7 +24,7 @@ class Solution:
                 list2 = list2.next
             curr = curr.next
 
-        # Приєднуємо хвіст, який залишився
+        # Attach remaining non-empty tail
         curr.next = list1 if list1 else list2
 
         return dummy.next

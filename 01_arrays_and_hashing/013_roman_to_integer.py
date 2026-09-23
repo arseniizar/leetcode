@@ -1,8 +1,8 @@
 """
 LeetCode 13: Roman to Integer (Easy)
-Патерн: Hash Map + Subtractive Invariant
-Час: O(n), Пам'ять: O(1)
-Правило: якщо поточна літера менша за наступну — віднімаємо, інакше — додаємо.
+Pattern: Hash Map + Subtractive Invariant
+Time: O(n), Space: O(1)
+Rule: If the current numeral is smaller than the next numeral, subtract it; otherwise, add it.
 """
 
 class Solution:
@@ -14,7 +14,7 @@ class Solution:
         total = 0
 
         for i in range(len(s)):
-            # Якщо поточна менша за наступну -> віднімаємо
+            # If current numeral is smaller than the next -> subtract
             if i + 1 < len(s) and roman[s[i]] < roman[s[i + 1]]:
                 total -= roman[s[i]]
             else:

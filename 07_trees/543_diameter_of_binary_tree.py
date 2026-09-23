@@ -1,8 +1,8 @@
 """
 LeetCode 543: Diameter of Binary Tree (Easy)
-Патерн: Tree / DFS (Діаметр дерева)
-Час: O(n), Пам'ять: O(h)
-Ідея: Діаметр у вузлі = висота_лівого + висота_правого. Рахуємо максимум серед усіх вузлів.
+Pattern: Tree / DFS (Diameter Calculation)
+Time: O(n), Space: O(h)
+Idea: Diameter through any node = left_height + right_height. Track the maximum across all nodes.
 """
 
 class TreeNode:
@@ -24,7 +24,7 @@ class Solution:
             left_h = height(node.left)
             right_h = height(node.right)
 
-            # Оновлюємо найбільший шлях, що проходить через цей вузол
+            # Update the longest path passing through this node
             max_d = max(max_d, left_h + right_h)
 
             return 1 + max(left_h, right_h)
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     sol = Solution()
     # 1 -> (2 -> 4, 5), 3
     t = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3))
-    print("Test 1 Diameter:", sol.diameterOfBinaryTree(t))  # 3 (довжина шляху 4->2->1->3 або 5->2->1->3)
+    print("Test 1 Diameter:", sol.diameterOfBinaryTree(t))  # 3

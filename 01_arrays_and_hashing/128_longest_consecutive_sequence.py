@@ -1,8 +1,8 @@
 """
 LeetCode 128: Longest Consecutive Sequence (Medium)
-Патерн: Hash Set / Sequence Start Check
-Час: O(n), Пам'ять: O(n)
-Ідея: число n є початком ланцюжка тільки якщо (n - 1) немає в сеті!
+Pattern: Hash Set / Sequence Start Detection
+Time: O(n), Space: O(n)
+Idea: A number n is the start of a consecutive sequence if (n - 1) is not in the set!
 """
 
 class Solution:
@@ -11,7 +11,7 @@ class Solution:
         longest = 0
 
         for n in num_set:
-            # Перевіряємо, чи це старт ланцюжка
+            # Check if n is the beginning of a sequence
             if (n - 1) not in num_set:
                 length = 1
                 while (n + length) in num_set:

@@ -1,8 +1,8 @@
 """
 LeetCode 2: Add Two Numbers (Medium)
-Патерн: Linked List + Dummy Head + Column Addition (додавання в стовпчик)
-Час: O(max(m, n)), Пам'ять: O(max(m, n))
-Чому reverse order: Одиниці вже на початку, тому додаємо head-to-head з переносом carry!
+Pattern: Linked List + Dummy Head + Column Addition
+Time: O(max(m, n)), Space: O(max(m, n))
+Why reverse order: Least significant digits (units) come first, allowing straightforward left-to-right addition with carry!
 """
 
 class ListNode:

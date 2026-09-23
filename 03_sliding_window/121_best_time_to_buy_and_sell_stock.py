@@ -1,8 +1,8 @@
 """
 LeetCode 121: Best Time to Buy and Sell Stock (Easy)
-Патерн: One-Pass / Tracking Minimum (Greedy / Sliding Window)
-Час: O(n), Пам'ять: O(1)
-Ідея: Тримаємо мінімальну ціну з минулого і порівнюємо з поточним днем.
+Pattern: One-Pass Running Minimum Tracking (Greedy / Sliding Window)
+Time: O(n), Space: O(1)
+Idea: Track the historical lowest price and calculate profit if sold today.
 """
 
 class Solution:
@@ -21,5 +21,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    print("Test 1:", s.maxProfit([7, 1, 5, 3, 6, 4]))  # 5 (купити за 1, продати за 6)
-    print("Test 2:", s.maxProfit([7, 6, 4, 3, 1]))     # 0 (ціни тільки падають)
+    print("Test 1:", s.maxProfit([7, 1, 5, 3, 6, 4]))  # 5 (buy at 1, sell at 6)
+    print("Test 2:", s.maxProfit([7, 6, 4, 3, 1]))     # 0 (prices only decrease)

@@ -1,8 +1,8 @@
 """
 LeetCode 26: Remove Duplicates from Sorted Array (Easy)
-Патерн: Two Pointers (Швидкий і повільний вказівник)
-Час: O(n), Пам'ять: O(1)
-Ідея: Замість видалення зсуваємо унікальні елементи на початок масиву.
+Pattern: Fast and Slow Two Pointers
+Time: O(n), Space: O(1)
+Idea: In-place overwrite unique numbers at the front rather than deleting elements.
 """
 
 class Solution:
@@ -10,11 +10,11 @@ class Solution:
         if not nums:
             return 0
 
-        # k — індекс, куди записуємо наступне унікальне число
+        # k: index where the next unique number should be written
         k = 1
 
         for i in range(1, len(nums)):
-            # Якщо число відрізняється від попереднього — воно унікальне!
+            # If current number differs from previous, it's unique!
             if nums[i] != nums[i - 1]:
                 nums[k] = nums[i]
                 k += 1

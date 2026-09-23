@@ -1,8 +1,8 @@
 """
 LeetCode 110: Balanced Binary Tree (Easy)
-Патерн: Tree / DFS (Збалансованість)
-Час: O(n), Пам'ять: O(h)
-Ідея: Якщо різниця висот лівого і правого піддерева > 1, повертаємо -1 (незбалансоване).
+Pattern: Tree / DFS (Height Balanced Check)
+Time: O(n), Space: O(h)
+Idea: If the absolute height difference of left and right subtrees > 1, return -1 (unbalanced).
 """
 
 class TreeNode:

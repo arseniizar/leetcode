@@ -1,7 +1,7 @@
 """
 LeetCode 226: Invert Binary Tree (Easy)
-Патерн: Tree / DFS (Рекурсивне віддзеркалення)
-Час: O(n), Пам'ять: O(h)
+Pattern: Tree / DFS (Recursive Tree Inversion)
+Time: O(n), Space: O(h)
 """
 
 class TreeNode:
@@ -16,7 +16,7 @@ class Solution:
         if not root:
             return None
 
-        # Міняємо місцями ліве і праве піддерево
+        # Swap left and right child subtrees
         root.left, root.right = root.right, root.left
 
         self.invertTree(root.left)
@@ -27,7 +27,7 @@ class Solution:
 
 if __name__ == "__main__":
     sol = Solution()
-    # Дерево: 4 -> (2, 7)
+    # Tree: 4 -> (2, 7)
     r = TreeNode(4, TreeNode(2), TreeNode(7))
     inv = sol.invertTree(r)
     print("Test 1:", inv.val, inv.left.val, inv.right.val)  # 4, 7, 2

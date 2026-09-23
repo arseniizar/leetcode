@@ -1,19 +1,19 @@
 """
 LeetCode 9: Palindrome Number (Easy)
-Патерн: Math / Base-10 Reversal
-Час: O(log10(n)), Пам'ять: O(1)
+Pattern: Math / Base-10 Digit Reversal
+Time: O(log10(n)), Space: O(1)
 """
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        # Від'ємні числа не можуть бути паліндромами
+        # Negative numbers cannot be palindromes
         if x < 0:
             return False
 
         t = x
         reversed_num = 0
 
-        # Збираємо число задом наперед через * 10 + остання_цифра
+        # Construct reversed number: reversed_num * 10 + last_digit
         while t > 0:
             last_digit = t % 10
             reversed_num = reversed_num * 10 + last_digit

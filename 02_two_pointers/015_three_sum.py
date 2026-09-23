@@ -1,7 +1,7 @@
 """
 LeetCode 15: 3Sum (Medium)
-Патерн: Sorting + Two Pointers (рух назустріч)
-Час: O(n^2), Пам'ять: O(1) або O(n) для результату
+Pattern: Sorting + Converging Two Pointers
+Time: O(n^2), Space: O(1) extra space (or O(n) for sorting/output)
 """
 
 class Solution:
@@ -10,7 +10,7 @@ class Solution:
         res = []
 
         for i in range(len(nums) - 2):
-            # Пропускаємо однакові числа для першого елемента
+            # Skip duplicate values for the first element
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
@@ -27,7 +27,7 @@ class Solution:
                 else:
                     res.append([nums[i], nums[left], nums[right]])
 
-                    # Пропускаємо дублікати для left і right
+                    # Skip duplicate values for left and right pointers
                     while left < right and nums[left] == nums[left + 1]:
                         left += 1
                     while left < right and nums[right] == nums[right - 1]:

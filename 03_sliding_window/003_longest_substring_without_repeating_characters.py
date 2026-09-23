@@ -1,10 +1,10 @@
 """
 LeetCode 3: Longest Substring Without Repeating Characters (Medium)
-Патерн: Sliding Window (Ковзне вікно з сетом)
-Час: O(n), Пам'ять: O(min(n, m))
-Ідея:
-  - right розширює вікно
-  - якщо зустріли дублікат — стискаємо вікно зліва (left += 1), поки дублікат не випаде
+Pattern: Sliding Window (Dynamic Window with Hash Set)
+Time: O(n), Space: O(min(n, m))
+Idea:
+  - right pointer expands the window
+  - when a duplicate is encountered, shrink the window from the left (left += 1) until valid
 """
 
 class Solution:
@@ -14,7 +14,7 @@ class Solution:
         max_len = 0
 
         for right in range(len(s)):
-            # Якщо буква вже є у вікні — підтягуємо лівий край
+            # If current character already exists in the window -> shrink left side
             while s[right] in char_set:
                 char_set.remove(s[left])
                 left += 1
@@ -30,4 +30,4 @@ if __name__ == "__main__":
     print("Test 1 (abcabcbb):", s.lengthOfLongestSubstring("abcabcbb"))  # 3 ("abc")
     print("Test 2 (bbbbb):", s.lengthOfLongestSubstring("bbbbb"))        # 1 ("b")
     print("Test 3 (pwwkew):", s.lengthOfLongestSubstring("pwwkew"))      # 3 ("wke")
-    print("Test 4 (пусто):", s.lengthOfLongestSubstring(""))             # 0
+    print("Test 4 (empty):", s.lengthOfLongestSubstring(""))             # 0
