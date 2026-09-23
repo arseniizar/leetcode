@@ -1,0 +1,40 @@
+"""
+LeetCode 543: Diameter of Binary Tree (Easy)
+Патерн: Tree / DFS (Діаметр дерева)
+Час: O(n), Пам'ять: O(h)
+Ідея: Діаметр у вузлі = висота_лівого + висота_правого. Рахуємо максимум серед усіх вузлів.
+"""
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class Solution:
+    def diameterOfBinaryTree(self, root: TreeNode | None) -> int:
+        max_d = 0
+
+        def height(node: TreeNode | None) -> int:
+            nonlocal max_d
+            if not node:
+                return 0
+
+            left_h = height(node.left)
+            right_h = height(node.right)
+
+            # Оновлюємо найбільший шлях, що проходить через цей вузол
+            max_d = max(max_d, left_h + right_h)
+
+            return 1 + max(left_h, right_h)
+
+        height(root)
+        return max_d
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    # 1 -> (2 -> 4, 5), 3
+    t = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3))
+    print("Test 1 Diameter:", sol.diameterOfBinaryTree(t))  # 3 (довжина шляху 4->2->1->3 або 5->2->1->3)
