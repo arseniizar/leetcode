@@ -1,6 +1,24 @@
 """
 LeetCode 121: Best Time to Buy and Sell Stock (Easy)
 Time: O(n), Space: O(1)
+
+C++ Solution:
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int min_price = prices[0];
+        int max_profit = 0;
+
+        for (int price : prices) {
+            min_price = min(min_price, price);
+            max_profit = max(max_profit, price - min_price);
+        }
+
+        return max_profit;
+    }
+};
+```
 """
 
 class Solution:

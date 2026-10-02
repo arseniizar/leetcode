@@ -20,8 +20,10 @@ Solutions to LeetCode problems organized by topic and pattern.
 * [Concatenation of Array](./01_arrays_and_hashing/1929_concatenation_of_array.py) (Easy) - List concatenation
 
 ### 2. [Two Pointers](./02_two_pointers/)
+* [Container With Most Water](./02_two_pointers/011_container_with_most_water.py) (Medium) - Inward two pointers with greedy area check
 * [3Sum](./02_two_pointers/015_three_sum.py) (Medium) - Sort and two pointers
 * [Remove Duplicates from Sorted Array](./02_two_pointers/026_remove_duplicates_from_sorted_array.py) (Easy) - Fast and slow pointers
+* [Trapping Rain Water](./02_two_pointers/042_trapping_rain_water.py) (Hard) - Two pointers tracking max bounds
 * [Merge Sorted Array](./02_two_pointers/088_merge_sorted_array.py) (Easy) - Three pointers from the end
 * [Valid Palindrome](./02_two_pointers/125_valid_palindrome.py) (Easy) - Two pointers inwards
 
