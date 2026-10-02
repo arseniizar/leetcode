@@ -28,7 +28,10 @@ Solutions to LeetCode problems organized by topic and pattern.
 * [Valid Palindrome](./02_two_pointers/125_valid_palindrome.py) (Easy) - Two pointers inwards
 
 ### 3. [Sliding Window](./03_sliding_window/)
-* [Longest Substring Without Repeating Characters](./03_sliding_window/003_longest_substring_without_repeating_characters.py) (Medium) - Sliding window with hash set
+* [Longest Substring Without Repeating Characters](./03_sliding_window/003_longest_substring_without_repeating_characters.py) (Medium) - Sliding window with hash set / direct address table
+* [Longest Repeating Character Replacement](./03_sliding_window/424_longest_repeating_character_replacement.py) (Medium) - Dynamic sliding window tracking max frequency
+* [Permutation in String](./03_sliding_window/567_permutation_in_string.py) (Medium) - Fixed-size sliding window with frequency delta
+* [Minimum Window Substring](./03_sliding_window/076_minimum_window_substring.py) (Hard) - Dynamic sliding window with debt counter
 * [Best Time to Buy and Sell Stock](./03_sliding_window/121_best_time_to_buy_and_sell_stock.py) (Easy) - One-pass minimum tracking
 
 ### 4. [Stack](./04_stack/)
