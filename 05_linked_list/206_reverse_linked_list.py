@@ -1,6 +1,26 @@
 """
 LeetCode 206: Reverse Linked List (Easy)
 Time: O(n), Space: O(1)
+
+C++ Solution:
+```cpp
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* prev = nullptr;
+        ListNode* curr = head;
+
+        while (curr != nullptr) {
+            ListNode* nxt = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = nxt;
+        }
+
+        return prev;
+    }
+};
+```
 """
 
 class ListNode:

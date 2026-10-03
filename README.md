@@ -44,12 +44,15 @@ Solutions to LeetCode problems organized by topic and pattern.
 ### 5. [Binary Search](./05_binary_search/)
 * [Median of Two Sorted Arrays](./05_binary_search/004_median_of_two_sorted_arrays.py) (Hard) - Binary search on partition
 * [Binary Search](./05_binary_search/704_binary_search.py) (Easy) - Classic binary search
+* [Search in Rotated Sorted Array](./05_binary_search/033_search_in_rotated_sorted_array.py) (Medium) - Pivot-guided binary search checking sorted half
+* [Find Minimum in Rotated Sorted Array](./05_binary_search/153_find_minimum_in_rotated_sorted_array.py) (Medium) - Binary search with right bound comparison
 
 ### 6. [Linked List](./05_linked_list/)
 * [Add Two Numbers](./05_linked_list/002_add_two_numbers.py) (Medium) - Column addition with carry
 * [Merge Two Sorted Lists](./05_linked_list/021_merge_two_sorted_lists.py) (Easy) - Pointer merging with dummy head
 * [Linked List Cycle](./05_linked_list/141_linked_list_cycle.py) (Easy) - Floyd's cycle detection
 * [Reverse Linked List](./05_linked_list/206_reverse_linked_list.py) (Easy) - Iterative pointer reversal
+* [Reorder List](./05_linked_list/143_reorder_list.py) (Medium) - Fast/slow middle finding, in-place reversal, and zipper merge
 
 ### 7. [Trees](./07_trees/)
 * [Same Tree](./07_trees/100_same_tree.py) (Easy) - Recursive comparison
