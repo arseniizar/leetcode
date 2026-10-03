@@ -26,16 +26,20 @@ Solutions to LeetCode problems organized by topic and pattern.
 * [Trapping Rain Water](./02_two_pointers/042_trapping_rain_water.py) (Hard) - Two pointers tracking max bounds
 * [Merge Sorted Array](./02_two_pointers/088_merge_sorted_array.py) (Easy) - Three pointers from the end
 * [Valid Palindrome](./02_two_pointers/125_valid_palindrome.py) (Easy) - Two pointers inwards
+* [Two Sum II - Input Array Is Sorted](./02_two_pointers/167_two_sum_ii_input_array_is_sorted.py) (Medium) - Inward two pointers on sorted array
 
 ### 3. [Sliding Window](./03_sliding_window/)
 * [Longest Substring Without Repeating Characters](./03_sliding_window/003_longest_substring_without_repeating_characters.py) (Medium) - Sliding window with hash set / direct address table
 * [Longest Repeating Character Replacement](./03_sliding_window/424_longest_repeating_character_replacement.py) (Medium) - Dynamic sliding window tracking max frequency
 * [Permutation in String](./03_sliding_window/567_permutation_in_string.py) (Medium) - Fixed-size sliding window with frequency delta
 * [Minimum Window Substring](./03_sliding_window/076_minimum_window_substring.py) (Hard) - Dynamic sliding window with debt counter
+* [Sliding Window Maximum](./03_sliding_window/239_sliding_window_maximum.py) (Hard) - Monotonic deque tracking window maximums
 * [Best Time to Buy and Sell Stock](./03_sliding_window/121_best_time_to_buy_and_sell_stock.py) (Easy) - One-pass minimum tracking
 
 ### 4. [Stack](./04_stack/)
-* [Valid Parentheses](./04_stack/020_valid_parentheses.py) (Easy) - Stack matching
+* [Valid Parentheses](./04_stack/020_valid_parentheses.py) (Easy) - Stack matching with expected brackets
+* [Evaluate Reverse Polish Notation](./04_stack/150_evaluate_reverse_polish_notation.py) (Medium) - Postfix evaluation with operand stack
+* [Min Stack](./04_stack/155_min_stack.py) (Medium) - Constant-time getMin tracking via pair stack
 
 ### 5. [Binary Search](./05_binary_search/)
 * [Median of Two Sorted Arrays](./05_binary_search/004_median_of_two_sorted_arrays.py) (Hard) - Binary search on partition
